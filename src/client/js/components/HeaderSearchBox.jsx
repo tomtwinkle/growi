@@ -69,10 +69,10 @@ class HeaderSearchBox extends React.Component {
       <div className={`form-group mb-0 ${isReachable ? '' : 'has-error'}`}>
         <div className="input-group flex-nowrap">
           <div className="input-group-prepend">
-            <button className="btn btn-secondary dropdown-toggle py-0" type="button" data-toggle="dropdown" aria-haspopup="true">
+            <button className="btn btn-secondary dropdown-toggle py-0" id="dropdownMenuButton" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               {scopeLabel}
             </button>
-            <div className="dropdown-menu">
+            <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
               <button className="dropdown-item" type="button" onClick={this.onClickAllPages}>All pages</button>
               <button className="dropdown-item" type="button" onClick={this.onClickChildren}>{ t('header_search_box.item_label.This tree') }</button>
             </div>

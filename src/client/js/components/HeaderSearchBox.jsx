@@ -31,10 +31,14 @@ class HeaderSearchBox extends React.Component {
   }
 
   onInputChange(text) {
+    document.getElementsByClassName('rbt-menu')[0].style.display = 'none';
+    console.log('clicked');
     this.setState({ text });
   }
 
   onClickAllPages() {
+    document.getElementsByClassName('rbt-menu')[0].style.display = 'none';
+    console.log('clicked');
     this.setState({ isScopeChildren: false });
   }
 

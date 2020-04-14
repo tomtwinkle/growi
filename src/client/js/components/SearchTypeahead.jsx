@@ -108,6 +108,7 @@ class SearchTypeahead extends React.Component {
     if (text === '') {
       this.setState({ pages: [] });
     }
+    document.getElementsByClassName('rbt-menu')[0].style.display = 'block';
   }
 
   onKeyDown(event) {

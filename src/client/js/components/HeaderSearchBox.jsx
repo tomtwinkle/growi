@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withTranslation } from 'react-i18next';
-import {
-  InputGroup, FormGroup, DropdownButton, MenuItem, Button,
-} from 'reactstrap';
+
 import { createSubscribedElement } from './UnstatedUtils';
 import AppContainer from '../services/AppContainer';
 
@@ -33,14 +31,10 @@ class HeaderSearchBox extends React.Component {
   }
 
   onInputChange(text) {
-    // document.getElementsByClassName('rbt-menu')[0].style.display = 'none';
-    // console.log('clicked');
     this.setState({ text });
   }
 
   onClickAllPages() {
-    // document.getElementsByClassName('rbt-menu')[0].style.display = 'none';
-    // console.log('clicked');
     this.setState({ isScopeChildren: false });
   }
 
@@ -72,14 +66,17 @@ class HeaderSearchBox extends React.Component {
     const isReachable = config.isSearchServiceReachable;
 
     return (
-      <FormGroup className={isReachable ? '' : 'has-error'}>
-        <InputGroup>
-          <InputGroup.Button className="btn-group-dropdown-scope">
-            <DropdownButton id="dbScope" title={scopeLabel}>
-              <MenuItem onClick={this.onClickAllPages}>All pages</MenuItem>
-              <MenuItem onClick={this.onClickChildren}>{ t('header_search_box.item_label.This tree') }</MenuItem>
-            </DropdownButton>
-          </InputGroup.Button>
+      <div className={`form-group mb-0 ${isReachable ? '' : 'has-error'}`}>
+        <div className="input-group flex-nowrap">
+          <div className="input-group-prepend">
+            <button className="btn btn-secondary dropdown-toggle py-0" type="button" data-toggle="dropdown" aria-haspopup="true">
+              {scopeLabel}
+            </button>
+            <div className="dropdown-menu mt-1">
+              <button className="dropdown-item" type="button" onClick={this.onClickAllPages}>All pages</button>
+              <button className="dropdown-item" type="button" onClick={this.onClickChildren}>{ t('header_search_box.item_label.This tree') }</button>
+            </div>
+          </div>
           <SearchForm
             t={this.props.t}
             crowi={this.props.appContainer}
@@ -87,13 +84,13 @@ class HeaderSearchBox extends React.Component {
             onSubmit={this.search}
             placeholder="Search ..."
           />
-          <InputGroup.Button className="btn-group-submit-search">
-            <Button bsStyle="link" onClick={this.search}>
+          <div className="btn-group-submit-search">
+            <span className="btn-link text-decoration-none" onClick={this.search}>
               <i className="icon-magnifier"></i>
-            </Button>
-          </InputGroup.Button>
-        </InputGroup>
-      </FormGroup>
+            </span>
+          </div>
+        </div>
+      </div>
     );
   }
 

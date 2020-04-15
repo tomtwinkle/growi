@@ -35,6 +35,7 @@ class HeaderSearchBox extends React.Component {
   }
 
   onClickAllPages() {
+    document.getElementsByClassName('rbt-menu show dropdown-menu')[0].style.display = 'none';
     this.setState({ isScopeChildren: false });
   }
 

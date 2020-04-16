@@ -60,15 +60,27 @@ class SecurityManagement extends React.Component {
 
         <div className="auth-mechanism-configurations m-t-10">
           <h2 className="border-bottom">{t('security_setting.Authentication mechanism settings')}</h2>
+          {/* 変更点開始 */}
           <Nav tabs>
-            <NavItem>
-              <NavLink
-                className={`${activeTab === 'passport-local' && 'active'} `}
-                onClick={() => { this.toggleActiveTab('passport-local') }}
-              >
-                <i className="fa fa-users" /> ID/Pass
-              </NavLink>
-            </NavItem>
+            {/* <NavItem>
+              <NavLink */}
+
+            <ul className="nav nav-tabs">
+              <li className="nav-item">
+
+                <a
+                  className={`${activeTab === 'passport-local' && 'active'} `}
+                  onClick={() => { this.toggleActiveTab('passport-local') }}
+                >
+                  <i className="fa fa-users" /> ID/Pass
+                </a>
+              </li>
+            </ul>
+
+            {/* </NavLink>
+              </NavItem>
+          {/* 変更終了 */}
+
             <NavItem>
               <NavLink
                 className={`${activeTab === 'passport-ldap' && 'active'} `}

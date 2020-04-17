@@ -65,6 +65,7 @@ class SecurityManagement extends React.Component {
             {/* <NavItem>
               <NavLink */}
             {/* test */}
+            {/* test2 */}
             <ul className="nav nav-tabs">
               <li className="nav-item">
 

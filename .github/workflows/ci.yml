@@ -118,7 +118,7 @@ jobs:
       with:
         type: ${{ job.status }}
         job_name: '*test (${{ matrix.node-version }})*'
-        channel: '#ci'
+        channel: '#slacktest'
         url: ${{ secrets.SLACK_WEBHOOK_URL }}
 
 

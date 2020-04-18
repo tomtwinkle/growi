@@ -53,12 +53,12 @@ jobs:
         yarn lint
 
     - name: Slack Notification
-      uses: homoluctus/slatify@master
+      uses: weseek/slack-notification@support/create-compact-mode
       if: failure()
       with:
         type: ${{ job.status }}
         job_name: '*test (${{ matrix.node-version }})*'
-        channel: '#ci'
+        channel: '#slacktest'
         url: ${{ secrets.SLACK_WEBHOOK_URL }}
 
 

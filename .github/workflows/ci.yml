@@ -60,7 +60,7 @@ jobs:
         job_name: '*test (${{ matrix.node-version }})*'
         channel: '#slacktest'
         url: ${{ secrets.SLACK_WEBHOOK_URL }}
-        isCompactMode: false
+        isCompactMode: true
 
 
   test:

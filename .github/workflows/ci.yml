@@ -114,7 +114,7 @@ jobs:
         MONGO_URI: mongodb://localhost:27017/growi_test
 
     - name: Slack Notification
-      uses: weseek/slack-notification@support/create-compact-mode
+      uses: weseek/ghaction-slack-notification@support/create-compact-mode-view
       if: failure()
       with:
         type: ${{ job.status }}

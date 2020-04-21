@@ -8,19 +8,38 @@
       </div>
 
       <div class="modal-body">
-
         <div class="row">
           <div class="col-lg-6">
             <h3><strong>{{ t('modal_shortcuts.global.title') }}</strong></h3>
 
+           <!-- d-table-row -->
             <div class="d-table">
               <div class="d-table-row">
-                <p class="d-table-cell p-2 bg-primary text-white">d-table</p>
-                <p class="d-table-cell p-2 bg-dark text-white">d-table</p>
+                <p class="d-table-cell p-2 bg-primary text-white">
+                  {{ t('modal_shortcuts.global.Open/Close shortcut help') }}:
+                </p>
+                <p class="d-table-cell p-2 bg-dark text-white">
+                  <span class="key cmd-key"></span> + <span class="key">/</span>
+                </p>
               </div>
               <div class="d-table-row">
-                <p class="d-table-cell p-2 bg-primary text-white">d-table</p>
-                <p class="d-table-cell p-2 bg-dark text-white">d-table</p>
+                <p class="d-table-cell p-2 bg-primary text-white">
+                  {{ t('modal_shortcuts.global.Create Page') }}:
+                </p>
+                <p class="d-table-cell p-2 bg-dark text-white">
+                  <span class="key">C</span>
+                </p>
+              </div>
+            </div>
+
+            <!-- grid layout -->
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-6">1列目</div>
+                <div class="col-lg-6">2列目</div>
+                <div class="w-100"></div>
+                <div class="col-lg-6">3列目</div>
+                <div class="col-lg-6">4列目</div>
               </div>
             </div>
 

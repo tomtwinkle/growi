@@ -22,6 +22,7 @@
                   <span class="key cmd-key"></span> + <span class="key">/</span>
                 </p>
               </div>
+
               <div class="d-table-row">
                 <p class="d-table-cell p-2 bg-primary text-white">
                   {{ t('modal_shortcuts.global.Create Page') }}:
@@ -34,27 +35,25 @@
 
             <!-- grid layout -->
             <div class="container">
-              <div class="row">
-                <div class="col-lg-6">{{ t('modal_shortcuts.global.Open/Close shortcut help') }}:</div>
-                <div class="col-lg-6"><span class="key cmd-key"></span> + <span class="key">/</span></div>
-                <div class="w-100"></div>
-                <div class="col-lg-6">{{ t('modal_shortcuts.global.Create Page') }}:</div>
-                <div class="col-lg-6"><span class="key">C</span></div>
-                <div class="w-100"></div>
-                <div class="col-lg-6">{{ t('modal_shortcuts.global.Edit Page') }}:</div>
-                <div class="col-lg-6"><span class="key">E</span></div>
+              <div class="row p-2">
+                <div class="col-lg-6 border p-2 bg-primary text-white">{{ t('modal_shortcuts.global.Open/Close shortcut help') }}:</div>
+                <div class="col-lg-6 border p-2 bg-dark text-white"><span class="key cmd-key"></span> + <span class="key">/</span></div>
 
-                <div class="w-100"></div>
+                <div class="col-lg-6 border p-2 bg-primary text-white">{{ t('modal_shortcuts.global.Create Page') }}:</div>
+                <div class="col-lg-6 border p-2 bg-dark text-white"><span class="key">C</span></div>
 
-                <div class="col-lg-6">{{ t('modal_shortcuts.global.Show Contributors') }}:</div>
-                <div class="col-lg-6"><a href="{{ t('modal_shortcuts.global.konami_code_url') }}" target="_blank">{{ t('modal_shortcuts.global.Konami Code') }}</a><br>
-                  <span class="key key-small">↑</span>&nbsp;<span class="key key-small">↑</span>
-                  <span class="key key-small">↓</span>&nbsp;<span class="key key-small">↓</span>
-                  <span class="key key-small">←</span>&nbsp;<span class="key key-small">→</span>
-                  <span class="key key-small">←</span>&nbsp;<span class="key key-small">→</span>
-                  <span class="key key-small">B</span>&nbsp;<span class="key key-small">A</span></div>
+                  <div class="col-lg-6 border p-2">{{ t('modal_shortcuts.global.Edit Page') }}:</div>
+                  <div class="col-lg-6 border p-2"><span class="key">E</span></div>
+
+                  <div class="col-lg-6 border p-2">{{ t('modal_shortcuts.global.Show Contributors') }}:</div>
+                  <div class="col-lg-6 border p-2"><a href="{{ t('modal_shortcuts.global.konami_code_url') }}" target="_blank">{{ t('modal_shortcuts.global.Konami Code') }}</a><br>
+                    <span class="key key-small">↑</span>&nbsp;<span class="key key-small">↑</span>
+                    <span class="key key-small">↓</span>&nbsp;<span class="key key-small">↓</span>
+                    <span class="key key-small">←</span>&nbsp;<span class="key key-small">→</span>
+                    <span class="key key-small">←</span>&nbsp;<span class="key key-small">→</span>
+                    <span class="key key-small">B</span>&nbsp;<span class="key key-small">A</span></div>
+                </div>
               </div>
-            </div>
 
             <!-- <table class="table">
               <tr>
@@ -116,7 +115,7 @@
           <div class="col-lg-6">
             <h3><strong>{{ t('modal_shortcuts.commentform.title') }}</strong></h3>
 
-            <table class="table">
+            <table class="table table-responsive">
               <tr>
                 <th>{{ t('modal_shortcuts.commentform.Post') }}:</th>
                 <td><span class="key cmd-key"></span> + <span class="key key-longer">{% include '../widget/icon-keyboard-return-enter.html' %}</span></td>

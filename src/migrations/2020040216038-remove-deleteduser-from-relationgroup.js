@@ -12,7 +12,7 @@ module.exports = {
     mongoose.connect(config.mongoUri, config.mongodb.options);
 
     const User = getModelSafely('User') || require('@server/models/user')();
-    const UserGroupRelation = getModelSafely('UserGroupRelation') || require('@server/models/user-group-relation')();
+    const UserGroupRelation = require('@server/models/user-group-relation')();
 
     const deletedUsers = await User.find({ status: 4 }); // deleted user
     const requests = await UserGroupRelation.remove({ relatedUser: deletedUsers });

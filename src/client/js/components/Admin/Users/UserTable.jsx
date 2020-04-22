@@ -70,7 +70,6 @@ class UserTable extends React.Component {
   getUserAdminLabel(isAdmin) {
     const { t } = this.props;
 
-    const huga = 'hoge';
     if (isAdmin) {
       return <span className="label label-inverse label-admin ml-2">{t('admin:user_management.user_table.administrator')}</span>;
     }
